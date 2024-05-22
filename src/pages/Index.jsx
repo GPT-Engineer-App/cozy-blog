@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -12,13 +12,15 @@ const Index = () => {
                 My Blog
               </Heading>
               <Flex as="nav">
-                <Link to="/" style={{ marginRight: "1rem" }}>
+                <ChakraLink as={Link} to="/" mr={4} color="white">
                   Home
-                </Link>
-                <Link to="/about" style={{ marginRight: "1rem" }}>
+                </ChakraLink>
+                <ChakraLink as={Link} to="/about" mr={4} color="white">
                   About
-                </Link>
-                <Link to="/contact">Contact</Link>
+                </ChakraLink>
+                <ChakraLink as={Link} to="/contact" color="white">
+                  Contact
+                </ChakraLink>
               </Flex>
             </Flex>
           </Container>
